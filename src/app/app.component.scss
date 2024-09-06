@@ -1,0 +1,60 @@
+// styles.scss or your component-specific SCSS file
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px; // Adjust as needed
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  div {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #333;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+      }
+    }
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    }
+  }
+}

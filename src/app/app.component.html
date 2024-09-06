@@ -1,0 +1,38 @@
+<!-- form1.html -->
+<form *ngIf="currentStep === 1" [formGroup]="form1" (ngSubmit)="onSubmitForm1()">
+  <div>
+    <label for="name1">Name:</label>
+    <input id="name1" formControlName="name1" />
+  </div>
+  <div>
+    <label for="email1">Email:</label>
+    <input id="email1" formControlName="email1" />
+  </div>
+  <button type="submit">Submit Form 1</button>
+</form>
+
+<!-- form2.html -->
+<form *ngIf="currentStep === 2" [formGroup]="form2" (ngSubmit)="onSubmitForm2()">
+  <div>
+    <label for="name2">Name:</label>
+    <input id="name2" formControlName="name2" />
+  </div>
+  <div>
+    <label for="email2">Email:</label>
+    <input id="email2" formControlName="email2" />
+  </div>
+  <button type="submit">Submit Form 2</button>
+</form>
+
+<!-- form3.html -->
+<form *ngIf="currentStep === 3" [formGroup]="form3" (ngSubmit)="onSubmitForm3()">
+  <div>
+    <label for="name3">Name:</label>
+    <input id="name3" formControlName="name3" />
+  </div>
+  <div>
+    <label for="email3">Email:</label>
+    <input id="email3" formControlName="email3" />
+  </div>
+  <button type="submit">Submit Form 3</button>
+</form>

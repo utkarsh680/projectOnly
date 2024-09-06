@@ -1,0 +1,20 @@
+<!-- form1.html -->
+<form *ngIf="currentStep === 1" [formGroup]="form1" (ngSubmit)="onSubmitForm1()">
+  <!-- Form 1 fields -->
+  <input formControlName="field1" />
+  <button type="submit">Submit Form 1</button>
+</form>
+
+<!-- form2.html -->
+<form *ngIf="currentStep === 2" [formGroup]="form2" (ngSubmit)="onSubmitForm2()">
+  <!-- Form 2 fields -->
+  <input formControlName="field2" />
+  <button type="submit">Submit Form 2</button>
+</form>
+
+<!-- form3.html -->
+<form *ngIf="currentStep === 3" [formGroup]="form3" (ngSubmit)="onSubmitForm3()">
+  <!-- Form 3 fields -->
+  <input formControlName="field3" />
+  <button type="submit">Submit Form 3</button>
+</form>
