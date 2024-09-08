@@ -13,7 +13,7 @@ import { PracticeComponent } from './practice/practice.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  currentStep: number = 1; // To keep track of the current form step
+  currentStep: number = 2; // To keep track of the current form step
 
   // Define the form groups for each form
   form1!: FormGroup;

@@ -1,29 +1,163 @@
 <!-- form1.html -->
+<!-- organization-details-form.component.html -->
+ <div class="form">
 <form *ngIf="currentStep === 1" [formGroup]="form1" (ngSubmit)="onSubmitForm1()">
+  <!-- Organization Name -->
   <div>
-    <label for="name1">Name:</label>
-    <input id="name1" formControlName="name1" />
+    <label for="organizationName">Name of the Organization:</label>
+    <input id="organizationName" formControlName="organizationName" />
+  </div>
+
+  <!-- Registered Address -->
+  <div>
+    <h3>Registered Address</h3>
+    <div>
+      <label for="buildingNo">Building No:</label>
+      <input id="buildingNo" formControlName="buildingNo" />
+    </div>
+    <div>
+      <label for="district">District:</label>
+      <input id="district" formControlName="district" />
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input id="city" formControlName="city" />
+    </div>
+    <div>
+      <label for="street">Street:</label>
+      <input id="street" formControlName="street" />
+    </div>
+    <div>
+      <label for="postalCode">Postal Code:</label>
+      <input id="postalCode" formControlName="postalCode" />
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <input id="state" formControlName="state" />
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <input id="country" formControlName="country" />
+    </div>
+  </div>
+
+  <!-- Date of Incorporation -->
+  <div>
+    <label for="incorporationDate">Date of Incorporation - Docswallet Directverify Network:</label>
+    <input id="incorporationDate" formControlName="incorporationDate" type="date" />
+  </div>
+
+  <!-- Organization Type -->
+  <div>
+    <label for="organizationType">Organization Type:</label>
+    <input id="organizationType" formControlName="organizationType" />
+  </div>
+
+  <!-- System Registration Mail ID -->
+  <div>
+    <label for="systemRegistrationMailId">System Registration Mail ID:</label>
+    <input id="systemRegistrationMailId" formControlName="systemRegistrationMailId" />
+  </div>
+
+  <!-- Director / Head Details -->
+  <div>
+    <label for="directorName">Director / Head Name:</label>
+    <input id="directorName" formControlName="directorName" />
   </div>
   <div>
-    <label for="email1">Email:</label>
-    <input id="email1" formControlName="email1" />
+    <label for="directorEmail">Director / Head - Email ID:</label>
+    <input id="directorEmail" formControlName="directorEmail" />
   </div>
-  <button type="submit">Submit Form 1</button>
+  <div>
+    <label for="directorContact">Director / Head - Contact Number:</label>
+    <input id="directorContact" formControlName="directorContact" />
+  </div>
+
+  <!-- Tenure of Organization -->
+  <div>
+    <label for="tenure">Tenure of Organization:</label>
+    <input id="tenure" formControlName="tenure" />
+  </div>
+
+  <!-- Number of Employees -->
+  <div>
+    <label for="numberOfEmployees">Number of Employees:</label>
+    <input id="numberOfEmployees" formControlName="numberOfEmployees" />
+  </div>
+
+  <!-- Country of Services -->
+  <div>
+    <label for="countryOfServices">From which country services carried out:</label>
+    <input id="countryOfServices" formControlName="countryOfServices" />
+  </div>
+
+  <!-- Number of Levels (Sub-users) -->
+  <div>
+    <label for="numberOfLevels">Number of Levels (Sub-users):</label>
+    <input id="numberOfLevels" formControlName="numberOfLevels" />
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit Organization Form</button>
 </form>
+</div>
+
 
 <!-- form2.html -->
+ <div class="form">
+<!-- person-details-form.component.html -->
 <form *ngIf="currentStep === 2" [formGroup]="form2" (ngSubmit)="onSubmitForm2()">
+  <!-- Name of the Person -->
   <div>
-    <label for="name2">Name:</label>
-    <input id="name2" formControlName="name2" />
+    <label for="personName">Name of the Person:</label>
+    <input id="personName" formControlName="personName" />
   </div>
+
+  <!-- Designation of the Person -->
   <div>
-    <label for="email2">Email:</label>
-    <input id="email2" formControlName="email2" />
+    <label for="designation">Designation of the Person:</label>
+    <input id="designation" formControlName="designation" />
   </div>
-  <button type="submit">Submit Form 2</button>
+
+  <!-- Official Email ID -->
+  <div>
+    <label for="officialEmail">Official Email ID (System Registration Mail ID):</label>
+    <input id="officialEmail" formControlName="officialEmail" type="email" />
+  </div>
+
+  <!-- Official Mobile Number -->
+  <div>
+    <label for="officialMobile">Official Mobile Number:</label>
+    <input id="officialMobile" formControlName="officialMobile" />
+  </div>
+
+  <!-- Official Landline Number -->
+  <div>
+    <label for="officialLandline">Official Landline Number:</label>
+    <input id="officialLandline" formControlName="officialLandline" />
+  </div>
+
+  <!-- Address Details -->
+  <div>
+    <label for="address">Address Details:</label>
+    <textarea id="address" formControlName="address"></textarea>
+  </div>
+
+  <!-- Designation Proof (Select any 1) -->
+  <div>
+    <label for="designationProof">Designation Proof (Select any 1):</label>
+    <select id="designationProof" formControlName="designationProof">
+      <option value="ID Card">ID Card</option>
+      <option value="Employment Letter">Employment Letter</option>
+      <option value="Contract">Contract</option>
+    </select>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit Person Form</button>
 </form>
 
+</div>
 <!-- form3.html -->
 <form *ngIf="currentStep === 3" [formGroup]="form3" (ngSubmit)="onSubmitForm3()">
   <div>
