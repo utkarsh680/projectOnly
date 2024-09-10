@@ -1,6 +1,11 @@
 <!-- form1.html -->
 <!-- organization-details-form.component.html -->
- <div class="form">
+ <a routerLink = "kyc">kyc</a>
+<router-outlet></router-outlet>
+
+<!-- You can also add other components or content below -->
+<h2>Form Step {{ currentStep }}</h2>
+<div class="form">
 <form *ngIf="currentStep === 1" [formGroup]="form1" (ngSubmit)="onSubmitForm1()">
   <!-- Organization Name -->
   <div>
@@ -159,14 +164,54 @@
 
 </div>
 <!-- form3.html -->
+
+ <div class="form">
 <form *ngIf="currentStep === 3" [formGroup]="form3" (ngSubmit)="onSubmitForm3()">
-  <div>
-    <label for="name3">Name:</label>
-    <input id="name3" formControlName="name3" />
-  </div>
-  <div>
-    <label for="email3">Email:</label>
-    <input id="email3" formControlName="email3" />
-  </div>
+    <!-- Name of the Person -->
+    <div>
+      <label for="personName">Name of the Person:</label>
+      <input id="personName" formControlName="personName" />
+    </div>
+  
+    <!-- Designation of the Person -->
+    <div>
+      <label for="designation">Designation of the Person:</label>
+      <input id="designation" formControlName="designation" />
+    </div>
+  
+    <!-- Official Email ID -->
+    <div>
+      <label for="officialEmail">Official Email ID (System Registration Mail ID):</label>
+      <input id="officialEmail" formControlName="officialEmail" type="email" />
+    </div>
+  
+    <!-- Official Mobile Number -->
+    <div>
+      <label for="officialMobile">Official Mobile Number:</label>
+      <input id="officialMobile" formControlName="officialMobile" />
+    </div>
+  
+    <!-- Official Landline Number -->
+    <div>
+      <label for="officialLandline">Official Landline Number:</label>
+      <input id="officialLandline" formControlName="officialLandline" />
+    </div>
+  
+    <!-- Address Details -->
+    <div>
+      <label for="address">Address Details:</label>
+      <textarea id="address" formControlName="address"></textarea>
+    </div>
+  
+    <!-- Designation Proof (Select any 1) -->
+    <div>
+      <label for="designationProof">Designation Proof (Select any 1):</label>
+      <select id="designationProof" formControlName="designationProof">
+        <option value="ID Card">ID Card</option>
+        <option value="Employment Letter">Employment Letter</option>
+        <option value="Contract">Contract</option>
+      </select>
+    </div>
   <button type="submit">Submit Form 3</button>
 </form>
+</div>

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms'; // Import necessary modules for reactive forms
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-practice',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClientModule], // Add ReactiveFormsModule here
+  imports: [ReactiveFormsModule, HttpClientModule, RouterModule], // Add ReactiveFormsModule here
   templateUrl: './practice.component.html',
   styleUrls: ['./practice.component.scss']
 })
@@ -17,8 +18,11 @@ export class PracticeComponent implements OnInit {
   form2!: FormGroup;
   form3!: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
 
+  getTokyc() {
+    this.router.navigate(['/kyc']);
+  }
   ngOnInit(): void {
     // Initialize the form groups with form controls and validators
 

@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { AsyncPipe, NgIf, NgFor } from '@angular/common';
 import { PracticeComponent } from './practice/practice.component';
+import { KycComponent } from './kyc/kyc.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AsyncPipe, HttpClientModule, NgIf, NgFor, ReactiveFormsModule, PracticeComponent],
+  imports: [RouterOutlet, AsyncPipe, HttpClientModule, NgIf, NgFor, ReactiveFormsModule, PracticeComponent, KycComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

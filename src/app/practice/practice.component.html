@@ -1,9 +1,11 @@
 <!-- form1.html -->
+<a routerLink = "kyc">kyc</a>
 <form *ngIf="currentStep === 1" [formGroup]="form1" (ngSubmit)="onSubmitForm1()">
   <!-- Form 1 fields -->
   <input formControlName="field1" />
   <button type="submit">Submit Form 1</button>
 </form>
+
 
 <!-- form2.html -->
 <form *ngIf="currentStep === 2" [formGroup]="form2" (ngSubmit)="onSubmitForm2()">
@@ -18,3 +20,5 @@
   <input formControlName="field3" />
   <button type="submit">Submit Form 3</button>
 </form>
+
+<li><a routerLink="/kyc">hello</a></li>
